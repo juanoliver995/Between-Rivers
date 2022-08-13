@@ -1,38 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ligth-grey: #fafafa;
+  --dark-grey: #212121;
+  --ligth-purple: #ba68c8;
+  --ligth-grey-violet: #e9ccf1;
+  --font-tittle: 'Fredoka One', cursive;
+  --font-ticket: 'Graduate', cursive;
+}
+
+body {
+  background-color: var(--dark-grey);
+  width: 100%;
+  min-height: 100vh;
+}
+
 .App {
+  height: 90vh;
+  display: grid;
+  place-items: center center;
+}
+
+.container-bubbles {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.bubbles {
+  position: relative;
+  display: flex;
+}
+
+.bubbles span {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: #ba68c8;
+  margin: 0 4px;
+  border-radius: 9999px;
+  box-shadow: 0 0 0 10px #ba68c844,
+    0 0 50px #ba68c8,
+    0 0 100px #ba68c8;
+  animation: bubbles 15s linear infinite;
+}
+
+.bubbles span:nth-child(even) {
+  background-color: #b22dff;
+  box-shadow: 0 0 0 10px #b22dff44,
+    0 0 50px #b22dff,
+    0 0 100px #b22dff;
+}
+
+@keyframes bubbles {
+  0% {
+    transform: translateY(100vh) scale(.3);
+  }
+
+  100% {
+    transform: translateY(-5vh) scale(.8);
+  }
+}
+
+.flip-container {
+  background-color: transparent;
+  width: 800px;
+  perspective: 1500px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+
+.flip-container .card-flip {
+  animation: flip 2s 2s 1 forwards;
+
+}
+
+@keyframes flip {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(180deg);
+  }
+
+}
+
+
+.card-flip {
+  display: inline-block;
+  width: 100%;
+  height: 374px;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+  position: relative;
+}
+
+.container {
+  background-color: rgba(19, 19, 19, 0.8);
+  backdrop-filter: blur(5px) brightness(1.05) contrast(104%) grayscale(10%) opacity(90%);
+  width: 800px;
+  min-height: 360px;
+  height: 100%;
+  padding: 10px;
+  border: 2px solid var(--ligth-grey-violet);
+  border-radius: 5px;
+  overflow: hidden;
+
+}
+
+.marca-de-agua {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.2);
+  transform: rotate(20deg);
+  padding-top: 120px;
+  padding-left: 50px;
+}
+
+.marca-de-agua h1 {
+  font-size: 100px;
+  transform: rotateY(180deg);
+}
+
+.card-flip .container {
+  transition: all 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+}
+
+.card-flip:hover .container {
+  transition: all 0.8s cubic-bezier(0.75, 0, 0.85, 1);
+  background-color: rgba(34, 12, 43, 0.6);
+}
+
+
+.frente,
+.dorso {
+  position: absolute;
+  backface-visibility: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.frente {
+  display: flex;
+}
+
+.dorso {
+  transform: rotateY(180deg);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-card {
+  border: 4px solid var(--ligth-grey-violet);
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-flip:hover .container-card {
+  border: 4px solid var(--ligth-purple);
+  transition: all 0.3s cubic-bezier(0.75, 0, 0.85, 1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
+  padding: 16px;
+}
+
+.header-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 9999px;
+  background-color: var(--dark-grey);
+  margin-right: 10px;
+}
+
+.header-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-name p {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--ligth-grey);
+  font-family: var(--font-ticket);
+}
+
+.header-ticket-number {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+
+}
+
+.header-ticket-number p:nth-child(1) {
+  font-size: 14px;
+  color: var(--ligth-grey);
+  font-family: var(--font-ticket);
+}
+
+.header-ticket-number p:nth-child(2) {
+  font-size: 20px;
+  color: var(--ligth-grey);
+  font-family: var(--font-ticket);
+}
+
+.header-ticket-number p span {
+  color: var(--ligth-purple);
+  font-family: var(--font-ticket);
+}
+
+.main-card {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.main-card h1 {
+  font-size: 70px;
+  color: var(--ligth-grey);
+  padding-top: 30px;
+  font-family: var(--font-tittle);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.card-flip:hover h1 {
+  transition: all 0.5s cubic-bezier(0.75, 0, 0.85, 1);
+  color: var(--ligth-grey);
+  text-shadow: 0 0 10px var(--ligth-purple);
+}
+
+.card-flip:hover .main-card div p {
+  transition: all 0.5s cubic-bezier(0.75, 0, 0.85, 1);
   color: white;
+  text-shadow: 0 0 10px var(--ligth-grey);
 }
 
-.App-link {
-  color: #61dafb;
+.main-card div {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--ligth-grey);
+  backdrop-filter: blur(5px);
+  background-color: rgba(33, 33, 33, 0.8);
+  backdrop-filter: blur(5px);
+  border-radius: 9999px;
+  border: transparent;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-card div p {
+  padding: 10px 42px;
+}
+
+.footer-card {
+  color: var(--ligth-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-family: var(--font-tittle);
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+.main-card-frente {
+  padding-top: 80px;
+}
+
+.main-card-frente h1 {
+  font-size: 60px;
+  color: var(--ligth-grey);
+  padding-top: 30px;
+  font-family: var(--font-tittle);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.main-card-frente div {
+  width: 400px;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--ligth-grey);
+  backdrop-filter: blur(5px);
+  background-color: rgba(33, 33, 33, 0.8);
+  backdrop-filter: blur(5px);
+  border-radius: 9999px;
+  border: transparent;
+  margin: 20px auto 0 auto;
+  font-family: var(--font-tittle);
+  letter-spacing: 5px;
+}
+
+.main-card-frente div p {
+  padding: 10px 32px;
+}
+
+.card-fente {
+  padding: 16px;
+  display: grid;
+  place-items: center;
 }
