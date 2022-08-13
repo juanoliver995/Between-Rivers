@@ -3,7 +3,7 @@
 
 function HeaderCard() {
     return (
-        <div className='header-card' data-atropos-offset="3">
+        <div className='header-card'>
             <div className='header-name'>
                 <div className='logo'></div>
                 <p>Marianelo</p>

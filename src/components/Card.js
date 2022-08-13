@@ -3,8 +3,7 @@ import Atropos from 'atropos/react';
 import HeaderCard from './HeaderCard';
 function Card() {
     return (
-        <Atropos duration={500} highlight={false} shadow={false} className="elAtropos">
-            {/* <div className='marca-de-agua'><h1>Between Rivers</h1></div> */}
+        <Atropos duration={500} highlight={true} shadow={false} className="elAtropos">
             <div className='container'>
                 <div className='container-card'>
                     <div className='card'>
