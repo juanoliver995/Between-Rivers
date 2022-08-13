@@ -5,9 +5,13 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  border-width: 0;
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  line-height: inherit;
+  border-style: solid;
+  border-color: #e5e7eb;
 }
 
 :root {
@@ -21,157 +25,69 @@
 
 body {
   background-color: var(--dark-grey);
-  width: 100%;
-  min-height: 100vh;
 }
 
 .App {
-  height: 90vh;
   display: grid;
-  place-items: center center;
-}
-
-.container-bubbles {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-}
-
-.bubbles {
-  position: relative;
-  display: flex;
-}
-
-.bubbles span {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  background-color: #ba68c8;
-  margin: 0 4px;
-  border-radius: 9999px;
-  box-shadow: 0 0 0 10px #ba68c844,
-    0 0 50px #ba68c8,
-    0 0 100px #ba68c8;
-  animation: bubbles 15s linear infinite;
-}
-
-.bubbles span:nth-child(even) {
-  background-color: #b22dff;
-  box-shadow: 0 0 0 10px #b22dff44,
-    0 0 50px #b22dff,
-    0 0 100px #b22dff;
-}
-
-@keyframes bubbles {
-  0% {
-    transform: translateY(100vh) scale(.3);
-  }
-
-  100% {
-    transform: translateY(-5vh) scale(.8);
-  }
-}
-
-.flip-container {
-  background-color: transparent;
-  width: 800px;
-  perspective: 1500px;
-  margin: 0 auto;
-  cursor: pointer;
-}
-
-
-.flip-container .card-flip {
-  animation: flip 2s 2s 1 forwards;
-
-}
-
-@keyframes flip {
-  from {
-    transform: rotateY(0deg);
-  }
-
-  to {
-    transform: rotateY(180deg);
-  }
-
-}
-
-
-.card-flip {
-  display: inline-block;
-  width: 100%;
-  height: 374px;
-  text-align: center;
-  transform-style: preserve-3d;
-  transition: transform 0.8s cubic-bezier(0.75, 0, 0.85, 1);
-  position: relative;
-}
-
-.container {
-  background-color: rgba(19, 19, 19, 0.8);
-  backdrop-filter: blur(5px) brightness(1.05) contrast(104%) grayscale(10%) opacity(90%);
-  width: 800px;
-  min-height: 360px;
+  place-content: center;
   height: 100%;
-  padding: 10px;
-  border: 2px solid var(--ligth-grey-violet);
-  border-radius: 5px;
-  overflow: hidden;
-
+  min-height: 100vh;
 }
 
-.marca-de-agua {
+.container-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1280px;
+}
+
+
+.elAtropos {
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  padding: 32px;
+}
+
+/* .marca-de-agua {
   position: absolute;
   color: rgba(255, 255, 255, 0.2);
-  transform: rotate(20deg);
-  padding-top: 120px;
-  padding-left: 50px;
+  transform: rotate(-20deg);
+} */
+
+.container {
+  background-color: rgba(19, 19, 19, 0.6);
+  backdrop-filter: blur(5px) brightness(1.05) contrast(104%) grayscale(10%) opacity(90%);
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--ligth-grey);
+  border-radius: 5px;
+  overflow: hidden;
 }
+
+.elAtropos:hover .container {
+  border: 4px solid var(--ligth-grey-violet);
+  transition: all 0.3s cubic-bezier(0.75, 0, 0.85, 1);
+}
+
+
 
 .marca-de-agua h1 {
   font-size: 100px;
-  transform: rotateY(180deg);
-}
-
-.card-flip .container {
-  transition: all 0.8s cubic-bezier(0.75, 0, 0.85, 1);
-}
-
-.card-flip:hover .container {
-  transition: all 0.8s cubic-bezier(0.75, 0, 0.85, 1);
-  background-color: rgba(34, 12, 43, 0.6);
-}
-
-
-.frente,
-.dorso {
-  position: absolute;
-  backface-visibility: hidden;
-  align-items: center;
-  justify-content: center;
-}
-
-.frente {
-  display: flex;
-}
-
-.dorso {
-  transform: rotateY(180deg);
-  text-align: center;
 }
 
 .container-card {
-  border: 4px solid var(--ligth-grey-violet);
+  border: 4px solid var(--ligth-grey);
   width: 100%;
   height: 100%;
   min-height: 350px;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
-.card-flip:hover .container-card {
-  border: 4px solid var(--ligth-purple);
+.elAtropos:hover .container-card {
+  border: 4px solid var(--ligth-grey-violet);
   transition: all 0.3s cubic-bezier(0.75, 0, 0.85, 1);
 }
 
@@ -187,8 +103,8 @@ body {
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
+  width: 56px;
+  height: 56px;
   border-radius: 9999px;
   background-color: var(--dark-grey);
   margin-right: 10px;
@@ -240,32 +156,28 @@ body {
 }
 
 .main-card h1 {
-  font-size: 70px;
+  font-size: 60px;
   color: var(--ligth-grey);
   padding-top: 30px;
   font-family: var(--font-tittle);
   letter-spacing: 5px;
   text-transform: uppercase;
+  padding-bottom: 10px;
 }
 
-.card-flip:hover h1 {
+.elAtropos:hover h1 {
   transition: all 0.5s cubic-bezier(0.75, 0, 0.85, 1);
   color: var(--ligth-grey);
   text-shadow: 0 0 10px var(--ligth-purple);
 }
 
-.card-flip:hover .main-card div p {
-  transition: all 0.5s cubic-bezier(0.75, 0, 0.85, 1);
-  color: white;
-  text-shadow: 0 0 10px var(--ligth-grey);
-}
 
 .main-card div {
   font-weight: 500;
   font-size: 16px;
   color: var(--ligth-grey);
   backdrop-filter: blur(5px);
-  background-color: rgba(33, 33, 33, 0.8);
+  background-color: rgba(53, 53, 53, 0.8);
   backdrop-filter: blur(5px);
   border-radius: 9999px;
   border: transparent;
@@ -288,40 +200,180 @@ body {
   text-transform: uppercase;
 }
 
-.main-card-frente {
-  padding-top: 80px;
+
+.container_socialShare {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
 }
 
-.main-card-frente h1 {
-  font-size: 60px;
-  color: var(--ligth-grey);
-  padding-top: 30px;
-  font-family: var(--font-tittle);
-  text-transform: uppercase;
-  letter-spacing: 2px;
+.container-btn {
+  width: 100%;
+
 }
 
-.main-card-frente div {
-  width: 400px;
-  font-weight: 500;
-  font-size: 18px;
-  color: var(--ligth-grey);
-  backdrop-filter: blur(5px);
-  background-color: rgba(33, 33, 33, 0.8);
-  backdrop-filter: blur(5px);
-  border-radius: 9999px;
+
+.container-btn button {
+  width: 100%;
+  font-size: 16px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
   border: transparent;
-  margin: 20px auto 0 auto;
-  font-family: var(--font-tittle);
-  letter-spacing: 5px;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  padding: 8px 20px;
+  color: var(--ligth-grey);
+  font-weight: 700;
+  cursor: pointer;
+  min-width: fit-content;
 }
 
-.main-card-frente div p {
-  padding: 10px 32px;
+
+.pass-line button {
+  background-image: linear-gradient(60deg, #faea07d2 10%, #eaac0ed2 50%, #ee9f0dd0 100%);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 20px 0 #eaac0ecc;
+  transition: all 0.5s ease;
+  column-gap: 10px;
 }
 
-.card-fente {
-  padding: 16px;
-  display: grid;
-  place-items: center;
+.pass-line:hover button {
+  box-shadow: 0 10px 20px #faea07cc, 0 5px 0 0 #ee9f0dcc;
+  transform: translateY(-5px);
+}
+
+.pass-line button img {
+  width: 35px;
+  height: 35px;
+}
+
+.downoad-ticket button {
+  column-gap: 10px;
+  background-image: linear-gradient(60deg, #11abf3cc 10%, #0f6be4cc 50%, #1227dfcc 100%);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 20px 0 #0f6be4cc;
+  transition: all 0.5s ease;
+}
+
+.downoad-ticket:hover button {
+  box-shadow: 0 10px 20px #11abf3cc, 0 5px 0 0 #1227dfcc;
+  transform: translateY(-5px);
+}
+
+.downoad-ticket button img {
+  width: 35px;
+  height: 35px;
+}
+
+.ig-share button {
+  column-gap: 10px;
+  background-image: linear-gradient(60deg, #fc136ccc 10%, #d11dc2cc 50%, #7643f6cc 100%);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 20px 0 #d11dc2cc;
+  transition: all 0.5s ease;
+}
+
+.ig-share:hover button {
+  box-shadow: 0 10px 20px #fc136ccc, 0 5px 0 0 #7643f6cc;
+  transform: translateY(-5px);
+}
+
+.ig-share button img {
+  padding: 3px;
+  width: 35px;
+  height: 35px;
+}
+
+@media screen and (max-width: 767px) {
+  .App {
+    display: grid;
+    place-items: center;
+  }
+
+  .container-main {
+    gap: 0;
+    min-height: 110vh;
+  }
+
+  .elAtropos {
+    width: 480px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  /* .marca-de-agua {
+    white-space: nowrap;
+    transform: rotate(-50deg);
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+  }
+
+  .marca-de-agua h1 {
+    overflow: hidden;
+    font-size: 60px;
+    letter-spacing: 2px;
+  } */
+
+  .header-card {
+    flex-direction: column-reverse;
+    align-items: center;
+    row-gap: 10px;
+    justify-content: center;
+  }
+
+  .main-card {
+    gap: 20px;
+  }
+
+  .main-card h1 {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .main-card div p {
+    width: 200px;
+    text-align: center;
+    font-size: 12px;
+    padding: 4px 12px;
+    line-height: 16px;
+  }
+
+  .header-ticket-number p:nth-child(1) {
+    font-size: 12px;
+  }
+
+  .header-ticket-number p:nth-child(2) {
+    font-size: 24px;
+
+  }
+
+  .footer-card {
+    letter-spacing: 5px;
+    padding-top: 28px;
+  }
+
+  .container_socialShare {
+    flex-direction: column;
+    gap: 10px;
+    max-width: 380px;
+    width: 100%;
+    padding: 0px 32px 32px 32px;
+  }
+
+}
+
+@media screen and (max-width: 550px) {
+  .elAtropos {
+    width: 100%;
+  }
 }
