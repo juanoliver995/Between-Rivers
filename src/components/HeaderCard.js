@@ -1,6 +1,5 @@
 
 
-
 function HeaderCard() {
     return (
         <div className='header-card'>

@@ -4,7 +4,7 @@ import HeaderCard from './HeaderCard';
 function Card() {
     return (
         <Atropos duration={500} highlight={true} shadow={false} className="elAtropos">
-            <div className='container'>
+            <div className='container-main-card'>
                 <div className='container-card'>
                     <div className='card'>
                         <HeaderCard />
