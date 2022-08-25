@@ -14,7 +14,7 @@ function Header() {
     return (
         <HeaderWrapper>
             <Link to={"/"}><img src={logoBR} alt="logo"></img></Link>
-            <Navbar open={open} />
+            <Navbar open={open} handleClick={handleClick} />
             <MenuButton open={open} handleClick={handleClick} />
         </HeaderWrapper>
     );

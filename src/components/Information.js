@@ -1,14 +1,16 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom"
+
+const Information = ({ artists }) => {
+
+    const andres = artists.find(artist => artist.name === "Andres Koller")
+    const geronimo = artists.find(artist => artist.name === "Geronimo Gonzalez")
+    const facundo = artists.find(artist => artist.name === "Facundo Asin")
+    const luciano = artists.find(artist => artist.name === "Luciano Vidal")
+    const gabriel = artists.find(artist => artist.name === "Gabriel Rojas")
 
 
-function Information() {
-    const andresId = 1
-    const geroId = 2
-    const facuId = 3
-    const pekeId = 4
-    const gabiId = 5
     return (
-        <div className="container-informacion">
+        <>
             <div className="header-informacion">
                 <div className='header-tittle'>
                     <h1>En esta seccion encontraras toda la informacion sobre nuestro evento</h1>
@@ -25,7 +27,7 @@ function Information() {
                         <p>BIRTHDAY EDIT</p>
                     </div>
                     <div className="container_fyer-main">
-                        <Link to={`/artists/${andresId}`}><img src="images/andres-flyer.png" alt="andres koller"></img></Link>
+                        {andres ? <Link to={`/artists/${andres.id}`}><img src="images/andres-flyer.png" alt="andres koller"></img></Link> : ""}
                     </div>
                     <div className="container_flyer-secondary">
                         <div className='logo-br-desktop'>
@@ -36,23 +38,23 @@ function Information() {
                             <div className='warm-up'>
                                 <h3>Warm up</h3>
                                 <div className='container-warm-up'>
-                                    <Link to={`/artists/${geroId}`}>Geronimo Gonzalez</Link>
+                                    {geronimo ? <Link to={`/artists/${artists[1].id}`}>Geronimo Gonzalez</Link> : ""}
                                     <span>&</span>
-                                    <Link to={`/artists/${facuId}`}>Facundo Asin</Link>
+                                    {facundo ? <Link to={`/artists/${artists[2].id}`}>Facundo Asin</Link> : ""}
                                 </div>
                             </div>
                             <div className='opening'>
                                 <h3>Opening</h3>
                                 <div className='container-opening'>
-                                    <Link to={`/artists/${pekeId}`}> Luciano Vidal</Link>
+                                    {luciano ? <Link to={`/artists/${artists[3].id}`}> Luciano Vidal</Link> : ""}
                                     <span>&</span>
-                                    <Link to={`/artists/${gabiId}`}> Gabriel Rojas</Link>
+                                    {gabriel ? <Link to={`/artists/${artists[4].id}`}> Gabriel Rojas</Link> : ""}
                                 </div>
                             </div>
                         </div>
                         <div className='footer-flyer'>
                             <div className='container-date'>
-                                <a className='fecha' target="_blank" rel='noreferrer' href='https://calendar.google.com/event?action=TEMPLATE&tmeid=N3FmcDFwYzQ4NzdjdXZsdjh1bnFsYmhkdTMgcGtydXZic29zdGlzZ3RrZnBzYjBkMWlvdWdAZw&tmsrc=pkruvbsostisgtkfpsb0d1ioug%40group.calendar.google.com'><h3>01 de Octubre</h3></a>
+                                <a className="fecha" target="_blank" href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=N3FyZHZzdmZ0ZnRxMzN1OWxsYnFzcTkwbGsgcGtydXZic29zdGlzZ3RrZnBzYjBkMWlvdWdAZw&amp;tmsrc=pkruvbsostisgtkfpsb0d1ioug%40group.calendar.google.com" rel="noreferrer" ><h3>01 DE OCTUBRE</h3></a>
                                 <a className='ubi' href='https://goo.gl/maps/kNUQ8RRCSBevZRK46' target="_blank" rel='noreferrer'><h3 >25 DE MAYO 175 - GUALEGUAYCHU - ENTRE RIOS</h3></a>
                             </div>
                             <div className='container-sponsor'>
@@ -67,8 +69,8 @@ function Information() {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 
-export default Information;
+export default Information

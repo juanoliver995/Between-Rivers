@@ -480,7 +480,6 @@ a {
 .galeri-container {
   width: 100%;
   background-color: var(--purple-main);
-  margin-bottom: 20px;
 }
 
 .galeri {
@@ -553,6 +552,7 @@ a {
 
 .container_fyer-main img {
   width: 100%;
+  max-width: 80vh;
 }
 
 .container_fyer-main img:hover {
@@ -740,6 +740,145 @@ a {
   font-size: 20px;
   margin: 5px auto;
 }
+
+/* Loader */
+
+.container-loader {
+  width: 100%;
+  min-height: 80vh;
+  display: grid;
+  place-items: center;
+  place-content: center;
+}
+
+.loader {
+  --path: var(--ligth-grey);
+  --dot: var(--purple-main);
+  --duration: 3s;
+  width: 44px;
+  height: 44px;
+  position: relative;
+}
+
+.loader:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  background: var(--dot);
+  top: 37px;
+  left: 19px;
+  transform: translate(-18px, -18px);
+  -webkit-animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+.loader svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.loader svg rect {
+  fill: none;
+  stroke: var(--path);
+  stroke-width: 10px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+
+.loader svg rect {
+  stroke-dasharray: 192 64 192 64;
+  stroke-dashoffset: 0;
+  -webkit-animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+
+
+@-webkit-keyframes pathRect {
+  25% {
+    stroke-dashoffset: 64;
+  }
+
+  50% {
+    stroke-dashoffset: 128;
+  }
+
+  75% {
+    stroke-dashoffset: 192;
+  }
+
+  100% {
+    stroke-dashoffset: 256;
+  }
+}
+
+@keyframes pathRect {
+  25% {
+    stroke-dashoffset: 64;
+  }
+
+  50% {
+    stroke-dashoffset: 128;
+  }
+
+  75% {
+    stroke-dashoffset: 192;
+  }
+
+  100% {
+    stroke-dashoffset: 256;
+  }
+}
+
+@-webkit-keyframes dotRect {
+  25% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(18px, -18px);
+  }
+
+  75% {
+    transform: translate(0, -36px);
+  }
+
+  100% {
+    transform: translate(-18px, -18px);
+  }
+}
+
+@keyframes dotRect {
+  25% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(18px, -18px);
+  }
+
+  75% {
+    transform: translate(0, -36px);
+  }
+
+  100% {
+    transform: translate(-18px, -18px);
+  }
+}
+
+.loader {
+  display: inline-block;
+  margin: 0 16px;
+}
+
+
+
+
 
 @media screen and (max-width: 1100px) {
   .container-artist {
@@ -970,6 +1109,12 @@ a {
 }
 
 @media screen and (max-width: 550px) {
+
+
+  .container-home_logo {
+    width: 90%;
+  }
+
   .elAtropos {
     width: 100%;
   }
@@ -994,6 +1139,15 @@ a {
     color: var(--ligth-grey);
     font-size: 18px;
     margin: 5px auto;
+  }
+
+  .galeri {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .button-ticket {
+    background-color: var(--purple-main);
   }
 
 }
