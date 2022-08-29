@@ -58,7 +58,7 @@ const  LoguinUsers = () => {
                         <label className="form__label">Password</label>
                         </div>
                         <div>
-                        <button className="btn-form">Loguin</button>
+                        <button className="btn-form">Login</button>
                         </div>
             </form> 
         </div> 

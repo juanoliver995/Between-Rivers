@@ -2,11 +2,9 @@ import LogoBrGrande from '../images/logo-br-grande.png'
 import { Link } from 'react-router-dom'
 import IconTicket from '../images/icon-ticket.png'
 import useUser from '../hooks/useUser'
-import { useNavigate } from 'react-router-dom'
 import useTicket from "../hooks/useTicket"
 function Home() {
     const { login, isLogged } = useUser()
-    let navigate = useNavigate()
     const { createTicket, isTicket } = useTicket()
 
     
@@ -22,8 +20,8 @@ function Home() {
             </div>
             <div className='container-btn-ticket'>
                 {(!isLogged && isTicket) || (isLogged && !isTicket) 
-                    ? <Link className='button-ticket' to="/login"><img src={IconTicket} alt="icono de ticket"></img>Ver mi ticket</Link>
-            :<Link className='button-ticket' to="/login"><img src={IconTicket} alt="icono de ticket"></img>Consigue tu ticket</Link>     
+                ? <Link className='button-ticket' to="/login"><img src={IconTicket} alt="icono de ticket"></img>Ver mi ticket</Link>
+                :<Link className='button-ticket' to="/login"><img src={IconTicket} alt="icono de ticket"></img>Consigue tu ticket</Link>     
             }
             
             </div>

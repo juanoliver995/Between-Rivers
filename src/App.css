@@ -446,12 +446,16 @@ a {
   background-image: linear-gradient(60deg, #faea07d2 10%, #eaac0ed2 50%, #ee9f0dd0 100%);
   backdrop-filter: blur(5px);
   box-shadow: 0 2px 20px 0 #eaac0ecc;
+  -webkit-box-shadow: 0 2px 20px 0 #eaac0ecc;
+  -moz-box-shadow: 0 2px 20px 0 #eaac0ecc;
   transition: all 0.5s ease;
   column-gap: 10px;
 }
 
 .pass-line:hover a {
   box-shadow: 0 10px 20px #faea07cc, 0 5px 0 0 #ee9f0dcc;
+  -webkit-box-shadow: 0 10px 20px #faea07cc, 0 5px 0 0 #ee9f0dcc;
+  -moz-box-shadow: 0 10px 20px #faea07cc, 0 5px 0 0 #ee9f0dcc;
   transform: translateY(-5px);
 }
 
@@ -465,11 +469,15 @@ a {
   background-image: linear-gradient(60deg, #11abf3cc 10%, #0f6be4cc 50%, #1227dfcc 100%);
   backdrop-filter: blur(5px);
   box-shadow: 0 2px 20px 0 #0f6be4cc;
+  -webkit-box-shadow: 0 2px 20px 0 #0f6be4cc;
+  -moz-box-shadow: 0 2px 20px 0 #0f6be4cc;
   transition: all 0.5s ease;
 }
 
 .downoad-ticket:hover a {
   box-shadow: 0 10px 20px #11abf3cc, 0 5px 0 0 #1227dfcc;
+  -webkit-box-shadow: 0 10px 20px #11abf3cc, 0 5px 0 0 #1227dfcc;
+  -moz-box-shadow: 0 10px 20px #11abf3cc, 0 5px 0 0 #1227dfcc;
   transform: translateY(-5px);
 }
 
@@ -483,11 +491,15 @@ a {
   background-image: linear-gradient(60deg, #fc136ccc 10%, #d11dc2cc 50%, #7643f6cc 100%);
   backdrop-filter: blur(5px);
   box-shadow: 0 2px 20px 0 #d11dc2cc;
+  -webkit-box-shadow: 0 2px 20px 0 #d11dc2cc;
+  -moz-box-shadow: 0 2px 20px 0 #d11dc2cc;
   transition: all 0.5s ease;
 }
 
 .ig-share:hover a {
   box-shadow: 0 10px 20px #fc136ccc, 0 5px 0 0 #7643f6cc;
+  -webkit-box-shadow: 0 10px 20px #fc136ccc, 0 5px 0 0 #7643f6cc;
+  -moz-box-shadow: 0 10px 20px #fc136ccc, 0 5px 0 0 #7643f6cc;
   transform: translateY(-5px);
 }
 
@@ -885,6 +897,8 @@ a {
   justify-content: space-between;
   flex-direction: column;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.3);
   background-color: var(--dark-grey-box);
 }
 
@@ -989,12 +1003,16 @@ a {
   background: linear-gradient(to right, rgba(121, 53, 172, 0.1) 1%, transparent 40%, transparent 60%, rgba(121, 53, 172, 0.1) 100%);
   color: var(--violet);
   box-shadow: inset 0 0 10px rgba(121, 53, 172, 0.4), 0 0 9px 3px rgba(121, 53, 172, 0.1);
+  -webkit-box-shadow: inset 0 0 10px rgba(121, 53, 172, 0.4), 0 0 9px 3px rgba(121, 53, 172, 0.1);
+  -moz-box-shadow: inset 0 0 10px rgba(121, 53, 172, 0.4), 0 0 9px 3px rgba(121, 53, 172, 0.1);
   font-weight: 500;
 }
 
 .btn-form:hover {
   color: #7935ac;
   box-shadow: inset 0 0 10px rgba(121, 53, 172, 0.6), 0 0 9px 3px rgba(121, 53, 172, 0.2);
+  -webkit-box-shadow: inset 0 0 10px rgba(121, 53, 172, 0.6), 0 0 9px 3px rgba(121, 53, 172, 0.2);
+  -moz-box-shadow: inset 0 0 10px rgba(121, 53, 172, 0.6), 0 0 9px 3px rgba(121, 53, 172, 0.2);
 }
 
 .btn-form:before {
@@ -1127,6 +1145,8 @@ a {
   padding: 20px;
   text-align: center;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.3);
 }
 
 .card-points p {
@@ -1170,6 +1190,8 @@ a {
   -webkit-animation: cardAnimacion 1.4s;
   animation: cardAnimacion 1.4s;
   box-shadow: 0 0 0 0.8em rgba(255, 255, 255, 0);
+  -webkit-box-shadow: 0 0 0 0.8em rgba(255, 255, 255, 0);
+  -moz-box-shadow: 0 0 0 0.8em rgba(255, 255, 255, 0);
   border-radius: 20px;
 }
 
@@ -1195,12 +1217,16 @@ a {
 @-webkit-keyframes cardAnimacion {
   0% {
     box-shadow: 0 0 0 0 var(--hoverContorno);
+    -webkit-box-shadow: 0 0 0 0 var(--hoverContorno);
+    -moz-box-shadow: 0 0 0 0 var(--hoverContorno);
   }
 }
 
 @keyframes cardAnimacion {
   0% {
     box-shadow: 0 0 0 0 var(--hoverContorno);
+    -webkit-box-shadow: 0 0 0 0 var(--hoverContorno);
+    -moz-box-shadow: 0 0 0 0 var(--hoverContorno);
   }
 }
 
@@ -1230,6 +1256,8 @@ a {
   max-width: 600px;
   border-radius: 5px;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .entradas-info h3 {
