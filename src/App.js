@@ -29,7 +29,7 @@ function App() {
           <Route path='/createTickets' element={<CreateTickets />} />
           <Route path="/card" element={<ContainerCard />}/>
           <Route path="/ticket" element={<ContainerTicket />} />
-            <Route path="/entradas" element={<Entradas />} />
+          <Route path="/entradas" element={<Entradas />} />
         </Routes>
     </BrowserRouter>
     </TicketContextProvider>

@@ -7,7 +7,7 @@ const InformationContainer = () => {
     const [loading, setLoading] = useState(false)
     useEffect(() => {
         setLoading(true)
-        fetch("http://localhost:3001/api/artists")
+        fetch("https://shrouded-dusk-50176.herokuapp.com/api/artists")
             .then(response => response.json())
             .then((data) => {
                 setArtists(data)
