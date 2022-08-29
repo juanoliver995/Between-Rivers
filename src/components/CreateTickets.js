@@ -36,9 +36,9 @@ const CreateTickets = () => {
                 <h4>Crear Ticket</h4>
                 <p>Si no tiene cuenta crea tu ticket</p>
             </div>
-            <div>
-            <label>Nombre</label>
+            <div className='form__group field'>
                 <input
+                    className="form__field"
                     type="text"
                     value={nameTicket}
                     name="Ingresa tu nombre"
@@ -49,10 +49,11 @@ const CreateTickets = () => {
                         setName(target.value)
                     }}
                 />
+                <label className="form__label">Nombre</label>
             </div>
-                <div>
-                    <label>Email</label>
+                <div className='form__group field'>
                     <input
+                        className="form__field"
                         type="email"
                         value={email}
                         name="Ingresa tu email"
@@ -62,6 +63,7 @@ const CreateTickets = () => {
                             setEmail(target.value)
                         }}
                     />
+                    <label className="form__label">Email</label>
                 </div>
             <div>
                 <button className="btn-form">Create</button>

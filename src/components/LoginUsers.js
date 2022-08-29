@@ -27,23 +27,24 @@ const  LoguinUsers = () => {
                             <h4>Invitados Especiales</h4>
                             <p>Si ya tienes cuenta inicia sesion</p>
                          </div>
-                        <div>
-                        <label>Username</label>
-                            <input
-                                type="text"
-                                value={username}
-                                name="username"
-                                placeholder="username"
-                                required
-                                pattern="[a-zA-Z ]{2,254}"
-                                onChange={({ target }) => {
-                                    setUsername(target.value)
-                                }}
-                            />
+                        <div className='form__group field'>
+                        <input 
+                            className="form__field"
+                            type="text"
+                            value={username}
+                            name="username"
+                            placeholder="username"
+                            required
+                            pattern="[a-zA-Z ]{2,254}"
+                            onChange={({ target }) => {
+                                setUsername(target.value)
+                            }}
+                         />
+                        <label className="form__label">Username</label>
                         </div>
-                        <div>
-                        <label>Password</label>
+                        <div className='form__group field'>
                             <input
+                                className="form__field"
                                 type="password"
                                 value={password}
                                 name="password"
@@ -54,6 +55,7 @@ const  LoguinUsers = () => {
                                     setPassword(target.value)
                                 }}
                             />
+                        <label className="form__label">Password</label>
                         </div>
                         <div>
                         <button className="btn-form">Loguin</button>
