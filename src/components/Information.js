@@ -16,8 +16,7 @@ const Information = ({ artists }) => {
                     <h1>En esta seccion encontraras toda la informacion sobre nuestro evento</h1>
                 </div>
                 <div>
-                    <p>Intenta <span>interactuar</span> con el flyer del evento para conseguir la informacion que necesites.</p>
-                    <p>Puedes <span>clickear</span> los elementos para obtener informacion sobre los artistas, horarios, ubicacion y nuestros sponsors.</p>
+                    <p>Puedes <span>clickear</span> los elementos del flyer para obtener informacion sobre los artistas, horarios, ubicacion y nuestros sponsors.</p>
                 </div>
             </div>
             <div className="container-bg">
@@ -38,17 +37,17 @@ const Information = ({ artists }) => {
                             <div className='warm-up'>
                                 <h3>Warm up</h3>
                                 <div className='container-warm-up'>
-                                    {geronimo ? <Link to={`/artists/${artists[1].id}`}>Geronimo Gonzalez</Link> : ""}
+                                    {geronimo ? <Link to={`/artists/${geronimo.id}`}>Geronimo Gonzalez</Link> : ""}
                                     <span>&</span>
-                                    {facundo ? <Link to={`/artists/${artists[2].id}`}>Facundo Asin</Link> : ""}
+                                    {facundo ? <Link to={`/artists/${facundo.id}`}>Facundo Asin</Link> : ""}
                                 </div>
                             </div>
                             <div className='opening'>
                                 <h3>Opening</h3>
                                 <div className='container-opening'>
-                                    {luciano ? <Link to={`/artists/${artists[3].id}`}> Luciano Vidal</Link> : ""}
+                                    {luciano ? <Link to={`/artists/${luciano.id}`}> Luciano Vidal</Link> : ""}
                                     <span>&</span>
-                                    {gabriel ? <Link to={`/artists/${artists[4].id}`}> Gabriel Rojas</Link> : ""}
+                                    {gabriel ? <Link to={`/artists/${gabriel.id}`}> Gabriel Rojas</Link> : ""}
                                 </div>
                             </div>
                         </div>

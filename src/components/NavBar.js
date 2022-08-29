@@ -6,9 +6,8 @@ function Navbar({ open, handleClick }) {
         <NavbarWrapper className="container container--2" open={open}>
             <Link onClick={handleClick} to="/" className="text">Inicio</Link>
             <Link onClick={handleClick} to="/information" className="text">Informacion</Link>
-            <Link onClick={handleClick} to="/loguin" className="text">Login</Link>
+            <Link onClick={handleClick} to="/entradas" className="text">Entradas</Link>
         </NavbarWrapper>
-
     );
 }
 

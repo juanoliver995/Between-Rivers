@@ -6,17 +6,16 @@ import Loader from "./Loader";
 const ArtistDetail = () => {
     const [artist, setartist] = useState({})
     const [loading, setLoading] = useState(false)
-    const { artistId } = useParams()
-    console.log(artistId)
+    const { id } = useParams()
     useEffect(() => {
         setLoading(true)
-        fetch(`https://shrouded-dusk-50176.herokuapp.com/api/artists/${artistId}`)
+        fetch(`https://shrouded-dusk-50176.herokuapp.com/api/artists/${id}`)
             .then((response) => response.json())
             .then((data) => {
                 setartist(data)
                 setLoading(false)
             })
-    }, [artistId]);
+    }, [id]);
 
     return (
         <div>
@@ -30,3 +29,5 @@ const ArtistDetail = () => {
 }
 
 export default ArtistDetail
+
+

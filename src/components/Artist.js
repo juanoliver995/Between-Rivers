@@ -2,8 +2,10 @@ import soundcloud from "../images/soundcloud.png"
 import spotify from "../images/spotify.png"
 import youtube from "../images/youtube.png"
 import instagram from "../images/instagram.png"
-
+import { useState } from "react"
+import Loader from './Loader'
 const Artist = ({ artist }) => {
+    
     return (
         <>
             <div className="container-artist">
