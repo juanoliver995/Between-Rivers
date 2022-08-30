@@ -10,10 +10,10 @@ function Entradas (){
             </div>
             <div className="container-entradas-img">
                 <div className="entradas-flyer">
-                        <img src="/images/entradas.jpg" alt="flyer entradas"></img>
+                    <img src="https://i.postimg.cc/Y0Tpwb5K/tiketes.png" alt="flyer entradas"></img>
                 </div>
                 <div className="entradas-flyer">
-                        <img src="/images/mesas.jpg" alt="flyer entradas"></img>
+                    <img src="https://i.postimg.cc/tJsXfLmN/mesas.png" alt="flyer entradas"></img>
                 </div>
             </div>
             <div className="entradas-info">
