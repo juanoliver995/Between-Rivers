@@ -21,7 +21,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route  path="/" element={<Home />} />
           <Route path="/information" element={<InformationContainer />} />
           <Route path="/artists/:id" element={<ArtistDetail />} />
           <Route path='/login' element={<ContainerLogin />} />

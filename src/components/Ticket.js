@@ -3,9 +3,11 @@ import Atropos from 'atropos/react';
 import HeaderTicket from './HeaderTicket';
 import Context from '../context/TicketContext';
 import { useContext } from 'react';
+import { useParams } from 'react-router-dom';
 function Ticket() {
-
     const { ticket, setTicket } = useContext(Context)
+    const { idTicket } = useParams()
+    console.log(ticket)
     return (
             <Atropos duration={500} highlight={true} shadow={false} className="elAtropos">
                     <div className='container-main-ticket'>

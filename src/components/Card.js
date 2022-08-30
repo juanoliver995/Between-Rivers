@@ -6,7 +6,6 @@ import Context from '../context/UserContext';
 import { useContext } from 'react';
 function Card() {
     const { user, setUser } = useContext(Context)
-  
     return (
         <>
         {

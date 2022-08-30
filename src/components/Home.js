@@ -20,7 +20,7 @@ function Home() {
             </div>
             <div className='container-btn-ticket'>
                 {(!isLogged && isTicket) || (isLogged && !isTicket) 
-                ? <Link className='button-ticket' to="/login"><img src={IconTicket} alt="icono de ticket"></img>Ver mi ticket</Link>
+                ?<Link className='button-ticket' to="/login"><img src={IconTicket} alt="icono de ticket"></img>Ver mi ticket</Link>
                 :<Link className='button-ticket' to="/login"><img src={IconTicket} alt="icono de ticket"></img>Consigue tu ticket</Link>     
             }
             
