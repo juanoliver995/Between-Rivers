@@ -2,9 +2,9 @@ import whatsapp from "../images/whatsapp.png"
 import instagram from "../images/instagram.png"
 function Points ({point}){
     return(
-        <div class="firstAnimation">
-            <div class="secondAnimation">
-                <div class="card-points">
+        <div className="firstAnimation">
+            <div className="secondAnimation">
+                <div className="card-points">
                 <div className="header-points-card">
                     <p>{point.city}</p>
                     <small>Entre Rios</small>

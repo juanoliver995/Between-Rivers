@@ -34,7 +34,7 @@ const CreateTickets = () => {
         <form onSubmit={handleLoginSubmit}>
             <div>
                 <h4>Crear Ticket</h4>
-                <p>Si no tiene cuenta crea tu ticket</p>
+                <p>Si no tienes cuenta crea tu ticket</p>
             </div>
             <div className='form__group field'>
                 <input

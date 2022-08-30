@@ -16,7 +16,7 @@ function ContainerPoints () {
             <h2>Puntos de venta</h2>
             <div className="container-points">
                 {
-                     points.map(point => <Points point={point}/>)
+                     points.map(point => <Points key={point.name} point={point}/>)
                 }
             </div>
         </div>

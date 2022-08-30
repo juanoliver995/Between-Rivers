@@ -1,5 +1,4 @@
 import ContainerPoints from "./ContainerPoints"
-
 function Entradas (){
     return (
         <div className="container-entradas">
@@ -10,10 +9,10 @@ function Entradas (){
             </div>
             <div className="container-entradas-img">
                 <div className="entradas-flyer">
-                        <img src="/images/entradas.jpg" alt="flyer entradas"></img>
+                    <img src="/images/tiketes.png" alt="flyer entradas"></img>
                 </div>
                 <div className="entradas-flyer">
-                        <img src="/images/mesas.jpg" alt="flyer entradas"></img>
+                        <img src="/images/mesas.png" alt="flyer entradas"></img>
                 </div>
             </div>
             <div className="entradas-info">
