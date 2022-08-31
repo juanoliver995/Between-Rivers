@@ -11,5 +11,7 @@ export default function login ({username, password}){
         return res.json()
     }).then(res=> {
         return res
+    }).catch(err => {
+        console.error(err)
     })
 }

@@ -7,8 +7,10 @@ export default function useTicket() {
     const createTicket = useCallback(({ nameTicket, numberTicket, email }) => {
         ticketServices({ nameTicket, numberTicket, email })
             .then(ticket => {
-                window.localStorage.setItem('ticket', JSON.stringify(ticket))
-                setTicket(ticket)
+                if(ticket){
+                    window.localStorage.setItem('ticket', JSON.stringify(ticket))
+                    setTicket(ticket)
+                }
             })
             .catch(err => {
                 window.localStorage.removeItem('user')

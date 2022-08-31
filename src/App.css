@@ -865,6 +865,12 @@ a {
 }
 
 /* formularios y login */
+.error {
+  margin-top: 20px;
+  font-size: 16px;
+  color: red;
+  text-align: center;
+}
 
 .container_login {
   width: 90%;
@@ -1307,6 +1313,8 @@ a {
   object-fit: contain;
   margin: 0 auto;
 }
+
+
 
 @media screen and (max-width: 1100px) {
   .container-artist {
