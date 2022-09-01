@@ -13,3 +13,6 @@ En la seccion de entradas podran enterarse de como comprar los ingresos fisicos 
 
 React, Css ademas de la integracion de una libreria llamada Atropos.js para el efecto de paralax conseguido en los tickets.
 
+### Deploy
+La app fue subida en vercel puedes verla en este link [BetweenRivers]([http://www.limni.net](https://www.betweenriversprod.com/))
+
